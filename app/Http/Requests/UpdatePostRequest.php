@@ -21,11 +21,17 @@ class UpdatePostRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rule = [
             'title' => 'required|string|max:50',
-            'body' => 'required|string|max:2000',
-            'image' => 'required|file|image|mimes:jpg,png'
+            'body' => 'required|string|max:2000'
+            // 画像の必須チェック
         ];
+
+
+        if ($this->file('image')) {
+            // バリデーションの種類
+            $rule['image'] = 'required|file|image|mimes:jpg,png';
+        }
+        return $rule;
     }
 }
-

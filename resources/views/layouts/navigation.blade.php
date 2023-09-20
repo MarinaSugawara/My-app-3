@@ -40,12 +40,12 @@
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
-
                             <x-dropdown-link :href="route('posts.create')">
                                 {{ __('Create Post') }}
                             </x-dropdown-link>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
+
                                 <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
@@ -114,18 +114,18 @@
                             {{ __('Log Out') }}
                         </x-responsive-nav-link>
                     </form>
-                @else
-                    <div class="px-4">
-                        <div class="font-medium text-base text-gray-800">guest</div>
-                    </div>
-                    <x-responsive-nav-link :href="route('register')">
-                        {{ __('Sign Up') }}
-                    </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('login')">
-                        {{ __('Log In') }}
-                    </x-responsive-nav-link>
-                @endauth
-            </div>
+                </div>
+            @else
+                <div class="px-4">
+                    <div class="font-medium text-base text-gray-800">guest</div>
+                </div>
+                <x-responsive-nav-link :href="route('register')">
+                    {{ __('Sign Up') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('login')">
+                    {{ __('Log In') }}
+                </x-responsive-nav-link>
+            @endauth
         </div>
     </div>
 </nav>

@@ -8,7 +8,7 @@
                     <b>{{ count($errors) }}件のエラーがあります。</b>
                 </p>
                 <ul>
-                    @foreach ($errors->all() as $error)
+                    @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>

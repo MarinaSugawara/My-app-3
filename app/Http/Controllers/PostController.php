@@ -74,9 +74,11 @@ class PostController extends Controller
     public function show(string $id)
     {
         // idを元にPostクラスのfindメソッドを取得
-        $post = Post::find($id);
+        $post = Post::with(['user'])->find($id);
+        $comments = $post->comments()->latest()->get()->load(['user']);
+
         // compact('post')==['post'=>$post]
-        return view('posts.show', compact('post'));
+        return view('posts.show', compact('post', 'comments'));
     }
 
     /**

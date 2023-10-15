@@ -1,1 +1,1 @@
-<h1 class="text-lg">Hare Blog</h1>
+<h2 class="font-bold">GhbB Urs</h2>

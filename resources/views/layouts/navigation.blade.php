@@ -20,7 +20,7 @@
                             @auth
                                 <div>{{ Auth::user()->name }}</div>
                             @else
-                                <div>guest</div>
+                                <div>Visitor</div>
                             @endauth
 
                             <div class="ml-1">

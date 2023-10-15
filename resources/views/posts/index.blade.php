@@ -1,6 +1,14 @@
 <x-app-layout>
-    <div class="container max-w-7xl mx-auto px-4 md:px-12 pb-3 mt-3">
+    <div class="container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words">
 
+    <body>
+        <div id="home" class="big-bg">
+            <h2 class="page-title text-5xl text-left my-12 font-bold">ゲストハウス掲示板サイト<h2>
+            <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="bg-cover mt-8">
+            <div class="home-content wrapper">
+            </div>
+        </div>
+    </body>
 
         <x-flash-message :message="session('notice')" />
         {{-- 終了タグはなし 文字列として変数を渡す --}}

@@ -14,6 +14,18 @@
 					<p class="text-xl md:text-xl text-gray-500">ゲストハウス情報を共有しよう✨</p>
                     <img src="{{ asset('images/プレゼンテーション1.jpg') }}" class="bg-cover mt-8 md:container md:mx-auto">
                     <br>
+
+                <h1> Ecoな検索エンジンの紹介🌳</h1>
+                <br>
+                <p>Ecosia(エコジア)
+                <br>
+                あなたのChange Challengeは？
+                <br>
+                毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。検索するだけで植樹に貢献できるんです！
+                <br>
+                <a href="https://www.ecosia.org/" class="underline hover:text-blue-600" target="_blank">A better planet with every search</a>
+                </p>
+                <br>
                     <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
 			</div>
 		</div>

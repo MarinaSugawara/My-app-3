@@ -1,14 +1,24 @@
 <x-app-layout>
     <div class="container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words">
 
-    <body>
-        <div id="home" class="big-bg">
-            <h2 class="page-title text-5xl text-left my-12 font-bold">ゲストハウス掲示板サイト<h2>
-            <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="bg-cover mt-8">
-            <div class="home-content wrapper">
-            </div>
-        </div>
-    </body>
+<!-- 変えてみたとこ -->
+<body>
+    
+
+<div class="w-full m-0 p-0 bg-cover bg-bottom">
+			<div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+				<!--Title-->
+					<p class="font-extrabold text-3xl md:text-5xl text-green">
+					    GhbB Urs <br>[Guest house Bulletin board YOURS]
+ 					</p>
+					<p class="text-xl md:text-xl text-gray-500">ゲストハウス情報を共有しよう✨</p>
+                    <img src="{{ asset('images/プレゼンテーション1.jpg') }}" class="bg-cover mt-8 md:container md:mx-auto">
+                    <br>
+                    <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
+			</div>
+		</div>
+
+</body>
 
         <x-flash-message :message="session('notice')" />
         {{-- 終了タグはなし 文字列として変数を渡す --}}

@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="container lg:w-1/2 md:w-4/5 w-11/12 mx-auto mt-8 px-8 bg-white shadow-md">
-        <h2 class="text-center text-lg font-bold pt-6 tracking-widest">ブログ編集</h2>
+        <h2 class="text-center text-lg font-bold pt-6 tracking-widest">投稿編集</h2>
 
         <x-validation-errors :errors="$errors" />
 
@@ -10,15 +10,15 @@
             @method('PUT')
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="title">
-                    タイトル
+                    施設名
                 </label>
                 <input type="text" name="title"
                     class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full py-2 px-3"
-                    required placeholder="タイトル" value="{{ old('title', $post->title) }}">
+                    required placeholder="Guest House Name" value="{{ old('title', $post->title) }}">
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="body">
-                    本文
+                    コメント本文
                 </label>
                 <textarea name="body" rows="10"
                     class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full py-2 px-3"
@@ -26,7 +26,7 @@
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="image">
-                    ブログ用画像
+                    投稿画像
                 </label>
                 {{-- 画像を表示してあげる --}}
                 <img src="{{ $post->image_url }}" class="mb-4 md:w-2/5 sm:auto">

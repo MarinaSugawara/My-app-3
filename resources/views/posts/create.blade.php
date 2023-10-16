@@ -9,15 +9,15 @@
             @csrf
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="title">
-                    タイトル
+                    施設名(Guess House Name)
                 </label>
                 <input type="text" name="title"
                     class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full py-2 px-3"
-                    required placeholder="タイトル" value="{{ old('title') }}">
+                    required placeholder="施設名" value="{{ old('title') }}">
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="body">
-                    本文
+                    投稿内容
                 </label>
                 <textarea name="body" rows="10"
                     class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full py-2 px-3"
@@ -25,12 +25,12 @@
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="image">
-                    ブログ用画像
+                    画像はこちら!
                 </label>
                 <input type="file" name="image" class="border-gray-300">
             </div>
             <input type="submit" value="登録"
-                class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                class="w-full bg-purple-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
         </form>
     </div>
 </x-app-layout>

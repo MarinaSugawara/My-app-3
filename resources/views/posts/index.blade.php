@@ -1,30 +1,35 @@
 <x-app-layout>
-    <div class="container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words">
+<div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+
+<div class="container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words">
 
 <!-- 変えてみたとこ -->
+
 <body>
-    
 
 <div class="w-full m-0 p-0 bg-cover bg-bottom">
-			<div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+			<div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal mt-6">
 				<!--Title-->
-					<p class="font-extrabold text-3xl md:text-5xl text-green">
+					<p class="font-extrabold text-1xl md:text-5xl text-green">
 					    GhbB Urs <br>[Guest house Bulletin board YOURS]
+                        <br>
  					</p>
+                    <br>
 					<p class="text-xl md:text-xl text-gray-500">ゲストハウス情報を共有しよう✨</p>
                     <img src="{{ asset('images/プレゼンテーション1.jpg') }}" class="bg-cover mt-8 md:container md:mx-auto">
                     <br>
+                    <br>
 
-                <h1> Ecoな検索エンジンの紹介🌳</h1>
-                <br>
-                <p>Ecosia(エコジア)
+                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"> Ecoな検索エンジンの紹介🌳</h1>
+                <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">Ecosia(エコジア)
                 <br>
                 あなたのChange Challengeは？
                 <br>
-                毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。検索するだけで植樹に貢献できるんです！
+                毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。<br>検索するだけで植樹に貢献できるんです！
                 <br>
-                <a href="https://www.ecosia.org/" class="underline hover:text-blue-600" target="_blank">A better planet with every search</a>
                 </p>
+                <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-blue-600" target="_blank">A better planet with every search</a>
+                <br>
                 <br>
                     <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
 			</div>
@@ -57,4 +62,16 @@
         </div>
         {{ $posts->links() }}
     </div>
+
+    <div class="bg-white py-6 sm:py-8 lg:py-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <!-- text - start -->
+        <div class="mb-10 md:mb-16">
+      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">FootPrints</h2>
+
+      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">旅が好きになるゲストハウス掲示板 GhbB Urs <br> &copy;GhbB Urs</p>
+
+        </div>
+    </div>
+</div>
 </x-app-layout>

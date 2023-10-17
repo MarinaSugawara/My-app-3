@@ -33,6 +33,8 @@
                 <br>
                     <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
 			</div>
+        <h1 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"><br>
+        投稿一覧<br></h1>
 		</div>
 
 </body>
@@ -55,11 +57,15 @@
                             {{ $post->created_at }}
                         </p>
                         <img class="w-full mb-2" src="{{ $post->image_url }}" alt="">
+                        <br>
                         <p class="text-gray-700 text-base">{{ Str::limit($post->body, 50) }}</p>
                     </a>
                 </article>
+                <br>
             @endforeach
         </div>
+        <p><br>
+        </p>
         {{ $posts->links() }}
     </div>
 

@@ -1,7 +1,7 @@
 <x-app-layout>
-<div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+<div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500 "></div>
 
-<div class="container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words">
+<div class="container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words bg-lime-100">
 
 <!-- 変えてみたとこ -->
 
@@ -20,19 +20,8 @@
                     <br>
                     <br>
 
-                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"> Ecoな検索エンジンの紹介🌳</h1>
-                <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">Ecosia(エコジア)
-                <br>
-                あなたのChange Challengeは？
-                <br>
-                毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。<br>検索するだけで植樹に貢献できるんです！
-                <br>
-                </p>
-                <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-blue-600" target="_blank">A better planet with every search</a>
-                <br>
-                <br>
-                    <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
 			</div>
+
         <h1 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"><br>
         投稿一覧<br></h1>
 		</div>
@@ -67,6 +56,23 @@
         <p><br>
         </p>
         {{ $posts->links() }}
+    </div>
+
+    <div class = "container max-w-5xl mx-auto px-4 md:px-12 pb-3 mt-3 break-words bg-emerald-50">
+                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"> Ecoな検索エンジンの紹介🌳</h1>
+                <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">Ecosia(エコジア)
+                <br>
+                あなたのChange Challengeは？
+                <br>
+                毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。<br>検索するだけで植樹に貢献できるんです！
+                <br>
+                <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-blue-600" target="_blank">A better planet with every search</a>
+                <br>
+                </p>
+                
+                <br>
+                    <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
+                <br>
     </div>
 
     <div class="bg-white py-6 sm:py-8 lg:py-12">

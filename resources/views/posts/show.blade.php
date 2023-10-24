@@ -38,6 +38,22 @@
                     class="bg-indigo-400 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline block">コメント登録</a>
             </div>
         @endauth
+        
+        <div>
+        @if(empty($my_nice))
+        <form action="{{ route('posts.nices.create', $post) }}">
+                        <input type="submit" value="いいね!"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-20">
+                    </form>
+        @else
+        <form action="{{ route('posts.nices.destroy', $post) }}">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="削除"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-20">
+                    </form>
+        @endif
+        </div>
 
         <section class="font-sans break-normal text-gray-900 ">
             @foreach ($comments as $comment)
@@ -62,7 +78,9 @@
 
                 </div>
                 <hr>
+                
             @endforeach
         </section>
     </div>
 </x-app-layout>
+

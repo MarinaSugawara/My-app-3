@@ -17,7 +17,11 @@ class Post extends Model
 
  public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function nices(){
+        return $this->hasMany('App\Models\Nice');
     }
 
     public function comments()

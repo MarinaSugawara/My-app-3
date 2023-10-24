@@ -17,8 +17,7 @@ class PostController extends Controller
     {
         $posts = Post::with('user')->latest()->paginate(4);
 
-
-
+        $my_nice = $post->nices()->where('user_id', Auth::user()->id);
 
         return view('posts.index', compact('posts'));
     }

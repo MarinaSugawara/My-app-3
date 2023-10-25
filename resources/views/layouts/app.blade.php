@@ -13,6 +13,8 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- ここにCSS -->
+        <link rel="stylesheet" href={{ asset("css/style.css") }}>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -28,6 +30,7 @@
             @endif
 
             <!-- Page Content -->
+            <!-- body tagの代わり -->
             <main>
                 {{ $slot }}
             </main>

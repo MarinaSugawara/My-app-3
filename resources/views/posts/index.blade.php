@@ -52,7 +52,7 @@
                         </p>
                         <img class="w-80 mb-2" src="{{ $post->image_url }}" alt="">
                         <br>
-                        <p class="text-gray-700 text-base">{{ Str::limit($post->body, 50) }}</p>
+                        <p class="text-gray-700 text-base">{{ Str::limit($post->body,100) }}</p>
                     </a>
                 </article>
                 <br>

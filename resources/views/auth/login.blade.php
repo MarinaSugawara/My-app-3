@@ -52,9 +52,10 @@
                 </a>
             @endif
 
-            <x-primary-button class="ml-3">
+            <x-primary-button class="ml-4">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+            <p class= "mt-4 text-blue-600">アカウント登録していない方はアカウント登録をお願い致します｡</p>
     </form>
 </x-guest-layout>

@@ -13,7 +13,7 @@
                     class="text-red-400 font-bold">{{ date('Y-m-d H:i:s', strtotime('-1 day')) < $post->created_at ? 'NEW' : '' }}</span>
                 {{ $post->created_at }}
             </p>
-            <img src="{{ $post->image_url }}" alt="" class="mb-4">
+            <img src="{{ $post->image_url }}" alt="" class="w-80 mb-2">
             <p class="text-gray-700 text-base">{!! nl2br(e($post->body)) !!}</p>
         </article>
         <div class="flex flex-row w-full">

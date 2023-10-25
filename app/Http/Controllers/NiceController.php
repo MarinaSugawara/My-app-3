@@ -20,7 +20,7 @@ class NiceController extends Controller
     }
 
      //いいねを消す
-    public function unnice(Post $post){
+    public function destroy(Post $post){
         $user = Auth::user()->id;
         $nice = Nice::where('post_id', $post->id)->where('user_id', $user)->first();
         $nice->delete();

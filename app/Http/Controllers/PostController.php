@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePostRequest;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -16,8 +17,6 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('user')->latest()->paginate(4);
-
-        $my_nice = $post->nices()->where('user_id', Auth::user()->id);
 
         return view('posts.index', compact('posts'));
     }
@@ -76,8 +75,12 @@ class PostController extends Controller
         $post = Post::with(['user'])->find($id);
         $comments = $post->comments()->latest()->get()->load(['user']);
 
+        // $my_nice = $post->nices()->where('user_id', Auth::user()->id);
+        $my_nice = $post->nices()->where('user_id', Auth::id())->first();
+
+
         // compact('post')==['post'=>$post]
-        return view('posts.show', compact('post', 'comments'));
+        return view('posts.show', compact('post', 'comments', 'my_nice'));
     }
 
     /**

@@ -34,8 +34,9 @@
             <div class="flex flex-row-reverse text-center my-4 mr-0 ml-auto">
                 @if (empty($my_nice))
                     <form action="{{ route('posts.nices.create', $post) }}">
-                        <input type="submit" value="いいね!"
+                        <input type="submit" value="いいね ! {{ $post->nices->count() }}"
                             class="bg-teal-400 hover:bg-green-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            
                     </form>
                 @else
                     <form action="{{ route('posts.nices.destroy', [$post, $my_nice]) }}" method="POST">

@@ -27,8 +27,30 @@
                     <!-- text - start -->
                     <div class="mb-10 md:mb-16">
                         <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">投稿一覧</h2>
+
                         <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">あなたの投稿が人の旅・人生を変えちゃうかも✨
                         </p>
+                        <div>
+                            {{-- 検索機能 形だけ --}}
+                            <label for="hs-search-box-with-loading-2"
+                                class="block text-sm font-medium mb-2 dark:text-white">検索(未完成)</label>
+                            <div class="flex rounded-md shadow-sm">
+                                <input type="text" id="hs-search-box-with-loading-2"
+                                    name="hs-search-box-with-loading-2"
+                                    class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-l-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                                    placeholder="🔍">
+                                <button type="button"
+                                    class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-r-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm">
+                                    <span
+                                        class="animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-white rounded-full"
+                                        role="status" aria-label="Enter">
+                                        <span class="sr-only">Enter</span>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+                        {{-- ここまで --}}
                     </div>
                     <!-- text - end -->
 
@@ -41,20 +63,20 @@
                             @foreach ($posts as $post)
                                 <article class="w-full px-4 md:w-1/2  text-gray-800 leading-normal">
                                     <a href="{{ route('posts.show', $post) }}">
-                                    <div class="px-20">
-                                        <h3
-                                            class="font-bold font-sans break-normal text-gray-900 pt-6 pb-1 text-3xl md:text-4xl break-words">
-                                            {{ $post->title }}</h3>
-                                        <h3>{{ $post->user->name }} さんより🙏</h3>
-                                        <p class="text-sm mb-2 md:text-base font-normal text-gray-600">
-                                            <span
-                                                class="text-red-400 font-bold">{{ date('Y-m-d H:i:s', strtotime('-1 day')) < $post->created_at ? 'NEW' : '' }}</span>
-                                            {{ $post->created_at }}
-                                        </p>
-                                        <img class="w-80 mb-2" src="{{ $post->image_url }}" alt="">
-                                        <br>
-                                        <p class="text-gray-700 text-base">{{ Str::limit($post->body, 100) }}</p>
-                                    </div>
+                                        <div class="px-20">
+                                            <h3
+                                                class="font-bold font-sans break-normal text-gray-900 pt-6 pb-1 text-3xl md:text-4xl break-words">
+                                                {{ $post->title }}</h3>
+                                            <h3>{{ $post->user->name }} さんより🙏</h3>
+                                            <p class="text-sm mb-2 md:text-base font-normal text-gray-600">
+                                                <span
+                                                    class="text-red-400 font-bold">{{ date('Y-m-d H:i:s', strtotime('-1 day')) < $post->created_at ? 'NEW' : '' }}</span>
+                                                {{ $post->created_at }}
+                                            </p>
+                                            <img class="w-80 mb-2" src="{{ $post->image_url }}" alt="">
+                                            <br>
+                                            <p class="text-gray-700 text-base">{{ Str::limit($post->body, 100) }}</p>
+                                        </div>
                                     </a>
                                 </article>
                                 <br>
@@ -73,20 +95,22 @@
 
 
             <div class = "md:px-12 pb-3 mt-3 break-words bg-emerald-50">
-                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"><br>🌳Ecoな検索エンジンの紹介🌳
+                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                    <br>🌳Ecoな検索エンジンの紹介🌳
                     </h1>
-                    <h1 class= "mx-auto max-w-screen-md text-center text-green-700 text-xl">Ecosia(エコジア)</h2>
-                    <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">
-                        毎日のインターネット検索に、Ecosia（エコジア）を使うだけで...『環境保護・植樹に貢献』できる! <br>日本語検索もOK!
-                        <br>
-                        <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-rose-600"
-                            target="_blank">A better planet with every search</a>
-                        <br>
-                    </p>
+                    <h1 class= "mx-auto max-w-screen-md text-center text-green-700 text-xl">Ecosia(エコジア)
+                </h2>
+                <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">
+                    毎日のインターネット検索に、Ecosia（エコジア）を使うだけで...『環境保護・植樹に貢献』できる! <br>日本語検索もOK!
+                    <br>
+                    <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-rose-600"
+                        target="_blank">A better planet with every search</a>
+                    <br>
+                </p>
 
-                    <br>
-                    <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
-                    <br>
+                <br>
+                <img src="{{ asset('images/balderschwang-447187_640.jpg') }}" class="md:mx-auto">
+                <br>
             </div>
             <br>
 
@@ -98,10 +122,12 @@
             <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <!-- text - start -->
                 <div class="mb-10 md:mb-16">
-                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-1xl">FootPrints ~足跡を残そう</h2>
+                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-1xl">FootPrints ~足跡を残そう
+                    </h2>
 
                     <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">旅が好きになるゲストハウス掲示板 GhbB Urs
-                        <br> &copy;GhbB Urs</p>
+                        <br> &copy;GhbB Urs
+                    </p>
                 </div>
             </div>
         </div>

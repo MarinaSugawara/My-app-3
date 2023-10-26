@@ -8,15 +8,15 @@
         <!-- <body> -->
 
         <div class="w-full m-0 p-0 bg-cover bg-bottom">
-            <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+            <div class="container max-w-4xl mx-auto pt-16 md:pt-16 text-center break-normal">
                 <!--Title-->
                 <p class="font-extrabold text-1xl md:text-5xl text-orange-600">
                     GhbB Urs <br>[Guest house Bulletin board YOURS]
                     <br>
                 </p>
 
-                <p class="text-xl md:text-xl text-gray-500">ゲストハウス情報を共有しよう✨</p>
-                <img src="{{ asset('images/START YOUR JOURNEY.jpg') }}" class="bg-cover mt-5 md:container md:mx-auto">
+                <p class="text-xl md:text-xl text-gray-500">ゲストハウス情報を共有しよう✨ <br></p>
+                <img src="{{ asset('images/START YOUR JOURNEY.jpg') }}" class="md:mx-auto mt-3">
                 <br>
                 <br>
 

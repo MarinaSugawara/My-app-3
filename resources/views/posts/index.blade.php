@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500 "></div>
+    <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
 
     <div class="px-4 md:px-12 pb-3 break-words bg-lime-100">
 
@@ -10,7 +10,7 @@
         <div class="w-full m-0 p-0 bg-cover bg-bottom">
             <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
                 <!--Title-->
-                <p class="font-extrabold text-1xl md:text-5xl text-green">
+                <p class="font-extrabold text-1xl md:text-5xl text-orange-600">
                     GhbB Urs <br>[Guest house Bulletin board YOURS]
                     <br>
                 </p>
@@ -73,15 +73,13 @@
 
 
             <div class = "md:px-12 pb-3 mt-3 break-words bg-emerald-50">
-                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"><br>Ecoな検索エンジンの紹介🌳
+                <h2 class = "mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"><br>🌳Ecoな検索エンジンの紹介🌳
                     </h1>
-                    <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">Ecosia(エコジア)
+                    <h1 class= "mx-auto max-w-screen-md text-center text-green-700 text-xl">Ecosia(エコジア)</h2>
+                    <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">
+                        毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。<br>検索するだけで植樹に貢献! <br>日本語検索もOK!
                         <br>
-                        あなたのChange Challengeは？
-                        <br>
-                        毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。<br>検索するだけで植樹に貢献できるんです！
-                        <br>
-                        <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-blue-600"
+                        <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-rose-600"
                             target="_blank">A better planet with every search</a>
                         <br>
                     </p>
@@ -100,7 +98,7 @@
             <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <!-- text - start -->
                 <div class="mb-10 md:mb-16">
-                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">FootPrints</h2>
+                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-1xl">FootPrints ~足跡を残そう</h2>
 
                     <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">旅が好きになるゲストハウス掲示板 GhbB Urs
                         <br> &copy;GhbB Urs</p>

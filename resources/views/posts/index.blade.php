@@ -77,7 +77,7 @@
                     </h1>
                     <h1 class= "mx-auto max-w-screen-md text-center text-green-700 text-xl">Ecosia(エコジア)</h2>
                     <p class = "mx-auto max-w-screen-md text-center text-green-500 md:text-lg">
-                        毎日のインターネット検索に、環境保護にコミットするサーチエンジンEcosia（エコジア）を使うこと。<br>検索するだけで植樹に貢献! <br>日本語検索もOK!
+                        毎日のインターネット検索に、Ecosia（エコジア）を使うだけで...『環境保護・植樹に貢献』できる! <br>日本語検索もOK!
                         <br>
                         <a href="https://www.ecosia.org/" class="underline text-blue-500 hover:text-rose-600"
                             target="_blank">A better planet with every search</a>

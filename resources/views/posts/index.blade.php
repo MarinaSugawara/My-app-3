@@ -16,7 +16,7 @@
                 </p>
 
                 <p class="text-xl md:text-xl text-gray-500">ゲストハウス情報を共有しよう✨ <br></p>
-                <img src="{{ asset('images/START YOUR JOURNEY.jpg') }}" class="md:mx-auto mt-3">
+                <img src="{{ asset('images/北欧版.jpg') }}" class="md:mx-auto mt-3 md:w-4/5">
                 <br>
                 <br>
 

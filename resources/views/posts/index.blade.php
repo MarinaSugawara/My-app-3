@@ -28,29 +28,31 @@
                     <div class="mb-10 md:mb-16">
                         <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">投稿一覧</h2>
 
-                        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">あなたの投稿が人の旅・人生を変えちゃうかも✨
+                        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">あなたの正直な投稿が人の旅・人生を変える!
                         </p>
                         <div>
                             {{-- 検索機能 形だけ --}}
                             <label for="hs-search-box-with-loading-2"
-                                class="block text-sm font-medium mb-2 dark:text-white">検索(未完成)</label>
-                            <div class="flex rounded-md shadow-sm">
-                                <input type="text" id="hs-search-box-with-loading-2"
-                                    name="hs-search-box-with-loading-2"
-                                    class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-l-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                    placeholder="🔍">
-                                <button type="button"
-                                    class="inline-flex flex-shrink-0 justify-center items-center h-[2.875rem] w-[2.875rem] rounded-r-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:z-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm">
-                                    <span
-                                        class="animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-white rounded-full"
-                                        role="status" aria-label="Enter">
-                                        <span class="sr-only">Enter</span>
-                                    </span>
-                                </button>
-                            </div>
-
+                                class="block text-sm font-medium mb-2 dark:text-white">検索フォーム</label>
                         </div>
-                        {{-- ここまで --}}
+                        {{-- 検索機能2 --}}
+
+                        <form method="GET" action="{{ route('posts.index') }}">
+                            <label for="default-search"
+                                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    
+                                </div>
+                                <input name="search" type="search" id="default-search"
+                                    class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="🔍入力">
+                                <button type="submit"
+                                    class="absolute right-2.5 bottom-2 top-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">検索</button>
+                            </div>
+                        </form>
+
+                        {{-- End --}}
                     </div>
                     <!-- text - end -->
 

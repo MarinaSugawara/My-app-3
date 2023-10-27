@@ -42,7 +42,7 @@
                                 class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    
+
                                 </div>
                                 <input name="search" type="search" id="default-search"
                                     class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -87,6 +87,9 @@
                         <p><br>
                         </p>
                         {{ $posts->links() }}
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+                    <h3 class="mx-auto max-w-screen-md text-center text-indigo-600 md:text-lg mt-1 content-center">【無料アカウント登録】は右上➚  Visitor<i class="fa-solid fa-bars"></i> マークからお願いいたします｡
+                    </h3>
 
                     </div>
                 </div>
